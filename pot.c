@@ -111,16 +111,16 @@ int pot_get_voltage_reading(void) {
 	}
 
 	// Get reading
-	int a2dReading = 0;
-	int itemsRead = fscanf(f, "%d", &a2dReading);
-	if (itemsRead <= 0) {
+	int a2d_reading = 0;
+	int items_read = fscanf(f, "%d", &a2d_reading);
+	if (items_read <= 0) {
 		printf("ERROR: Unable to read values from voltage input file.\n");
 		exit(-1);
 	}
 
 	// Close file
 	fclose(f);
-	return a2dReading;
+	return a2d_reading;
 }
 
 // Export pins to allow reading of potentiometer
